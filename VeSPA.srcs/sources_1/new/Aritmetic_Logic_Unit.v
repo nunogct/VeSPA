@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-
 `define ADD 5'b001
 `define SUB 5'b010
 `define OR  5'b011
@@ -10,11 +9,9 @@
 `define CMP 5'b111
 
 module Aritmetic_Logic_Unit(
-    input cond_bit_16,
     input [2:0]alu_cond,
-    input [31:0]reg1,
-    input [31:0]reg2,
-    input [31:0]immed16,
+    input [31:0]op1,
+    input [31:0]op2,
     output [31:0]alu_out,
     output reg Z,
     output reg C,
@@ -23,11 +20,6 @@ module Aritmetic_Logic_Unit(
     );
    
    wire subt;
-   
-   wire [31:0]op1;
-   wire [31:0]op2;
-   parameter WIDTH = 32;
-   
    reg [32:0]result;
    
    initial begin
@@ -48,24 +40,29 @@ module Aritmetic_Logic_Unit(
     `AND: begin result = op1 & op2; end
     `NOT: begin result = ~op1; end
     `CMP: begin result = op1 - op2; end
-    default: begin result = result; end
+    default: begin result = 'hzz; end
         endcase
         
-         if (alu_cond == `ADD || alu_cond == `SUB || alu_cond == `CMP)  
+         if (alu_cond == `ADD)  
         begin
-           Z = ~(|result[31:0]) ? 1'b1 : 1'b0;
-           C = (result[32]) ? 1'b1 : 1'b0;    
-           V = (result[WIDTH-1] & ~op1[WIDTH-1] & ~(subt ^ op2[WIDTH-1])) |
-                        (~result[WIDTH-1] & op1[WIDTH-1] & (subt ^ op2[WIDTH-1])) ? 1'b1 : 1'b0; 
-           N = result[31] ? 1'b1 : 1'b0;
+        C <= result[32];
+        Z <= ~(|result[31:0]);
+        V <= ( result[31] & ~op1[31] & ~(subt ^ op2[31])) 
+           |(~result[31] & op1[31] & (subt ^ op2[31]));     
+        end
+          else if(alu_cond == `SUB || alu_cond == `CMP)
+        begin
+            
+        Z <= ~(|result[31:0]);
+        N <= result[31];
+        V <= (result[31] & ~op1[31] & ~(subt ^ op2[31])) |
+           (~result[31] & op1[31] & (subt ^ op2[31])); 
         end
         
 end
     assign subt = (alu_cond == `SUB || alu_cond == `CMP) ? 1'b1 :
-                  (alu_cond == `ADD) ? 1'b0 : subt;
+                  (alu_cond == `ADD) ? 1'b0 : 'hzz;
     
-    assign op1 = reg1;
-    assign op2 = (cond_bit_16) ? immed16 : reg2;
     assign alu_out = result;
     
 endmodule

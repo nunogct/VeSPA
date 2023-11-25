@@ -17,8 +17,8 @@ module Instruction_Register(
     output [31:0]immed16, 
     output [31:0]immed23
     );
-    
- reg [31:0]IR;
+
+reg [31:0]IR;
  
 initial begin 
 IR = 'd0; 
@@ -46,6 +46,5 @@ assign immed22 = {{10'b0},  IR[21:0]};
 assign immed17 = {{16'b0} , IR[16:0]};
 assign immed16 = {{17'b0} , IR[15:0]};
 assign immed23 = {{9'b0} , IR[22:0]};
-
 
 endmodule

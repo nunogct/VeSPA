@@ -12,14 +12,8 @@ module tb_top();
     initial begin
         rst = 1'b1;
         clk = 1'b0;
-       
     end
     
-    always #10 clk = ~clk;
-    
-    always@(posedge clk)
-    begin
-        rst = 1'b0;  
-    end
+    always #100 clk = ~clk;
     
 endmodule

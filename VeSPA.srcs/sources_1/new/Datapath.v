@@ -4,31 +4,17 @@
 module Datapath(
         input clk,
         input rst,
-        
         input ir_load,
-    
-        input mem_read,
-        input mem_write,
-        
+        input mem_write_en,
         input pc_load,  
-        input pc_branch, 
-        input pc_jmp,
-        
         input cond_bit_16,
-        input alu_bit,
-        
-        
-        input ld_pc,
-        input ldi_bit,
-        input ld_mem,
         input st_mem,
-        
-        input direct_bit, 
-        input indexed_bit, 
-        
-        input write_reg,
-        
+
         input [2:0]alu_cond,
+        input ram_addr_in_sel,
+        input [1:0]regfile_in_sel,
+        input [1:0]pc_in_sel,  
+        input reg_write_en,
         
         output [4:0]opcode,
         output IM_OPP,
@@ -57,20 +43,45 @@ wire [31:0]alu_out;
 wire [31:0]alu_in1;
 wire [31:0]alu_in2;
 
-wire [31:0]pc_value;
+wire [31:0]pc_value_out;
 wire [31:0]rom_out;
 wire [31:0]ram_out;
 
-Register_File RF(clk,rst,write_reg,alu_bit,ld_pc,ldi_bit,ld_mem,st_mem,rs1,rs2,rsdt,alu_out,pc_value,ram_out,immed22,reg_out1,reg_out2);
+wire [31:0]regfile_value_in;
+wire [31:0]pc_value_in;
+wire [31:0]ram_addr_in;
+wire [31:0]rom_addr_in;
+wire [31:0]ram_data_in;
 
-Aritmetic_Logic_Unit ALU(cond_bit_16,opcode,reg_out1,reg_out2,immed16,alu_out,Z,C,V,N);
+Register_File RF(clk,rst,reg_write_en,st_mem,rs1,rs2,rsdt,regfile_value_in,reg_out1,reg_out2);
 
-Program_Counter PC(clk,rst,pc_load,pc_branch,pc_jmp,reg_out1,immed16,immed23,pc_value);
+Aritmetic_Logic_Unit ALU(alu_cond,alu_in1,alu_in2,alu_out,Z,C,V,N);
 
-Memory mm(clk,rst,mem_read,mem_write,pc_value,indx_value,immed22,ir_load,direct_bit,indexed_bit,reg_out2,ram_out,rom_out);
+Program_Counter PC(clk,rst,pc_load,pc_value_in,pc_value_out);
+
+Memory mm(clk,rst,mem_write_en,ram_addr_in,rom_addr_in,ram_data_in,ram_out,rom_out);
 
 Instruction_Register ir(clk,rst,ir_load,rom_out,opcode,cond,rsdt,rs1,rs2,IM_OPP,immed22,immed17,immed16,immed23);
 
+assign alu_in1 = reg_out1;
+assign alu_in2 = (cond_bit_16) ? immed16 : reg_out2;
+
+assign regfile_value_in = (regfile_in_sel  == 2'b00) ? alu_out :
+                          (regfile_in_sel  == 2'b01) ? pc_value_out:
+                          (regfile_in_sel  == 2'b10) ? immed22 :
+                          (regfile_in_sel  == 2'b11) ? ram_out: 'hzz; 
+
+assign pc_value_in = (pc_in_sel == 2'b00) ? reg_out1 + immed16:
+                     (pc_in_sel == 2'b01) ? pc_value_out :
+                     (pc_in_sel == 2'b10) ? pc_value_out + immed23:
+                     (pc_in_sel == 2'b11) ? pc_value_out + 3'b100 : 'hzz;
+
+assign ram_data_in = reg_out2;
+
+assign ram_addr_in = (ram_addr_in_sel) ? indx_value : immed22;
+                     
+assign rom_addr_in = pc_value_out;
+    
 assign indx_value = reg_out1 + immed17;
 
 endmodule
