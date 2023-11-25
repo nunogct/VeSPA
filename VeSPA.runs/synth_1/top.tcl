@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1/top.tcl"
+  variable script "/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,33 +70,35 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/nuno/Desktop/VeSPA_v4/VeSPA.cache/wt [current_project]
-set_property parent.project_path /home/nuno/Desktop/VeSPA_v4/VeSPA.xpr [current_project]
+set_property webtalk.parent_dir {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.cache/wt} [current_project]
+set_property parent.project_path {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
-set_property ip_output_repo /home/nuno/Desktop/VeSPA_v4/VeSPA.cache/ip [current_project]
+set_property ip_output_repo {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0.coe
-read_mem /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/memory_.mem
+add_files {{/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0.coe}}
+read_mem {{/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/memory_.mem}}
 read_verilog -library xil_defaultlib {
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Datapath.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Instruction_Register.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Memory.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Program_Counter.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Register_File.v
-  /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Control_Unit.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Datapath.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Instruction_Register.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Memory.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Program_Counter.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Register_File.v}
+  {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,9 +109,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/constrs_1/new/constraints.xdc}}
+set_property used_in_implementation false [get_files {{/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/constrs_1/new/constraints.xdc}}]
+
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/utils_1/imports/synth_1/top.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

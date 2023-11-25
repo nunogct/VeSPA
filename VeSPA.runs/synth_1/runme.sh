@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1'
+HD_PWD='/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

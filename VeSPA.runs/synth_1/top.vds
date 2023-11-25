@@ -3,181 +3,138 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov 22 23:08:00 2023
-# Process ID: 8322
-# Current directory: /home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1
+# Start of session at: Fri Nov 24 23:33:22 2023
+# Process ID: 69366
+# Current directory: /home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: /home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1/top.vds
-# Journal file: /home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1/vivado.jou
-# Running On: nuno-HP-Laptop-15-da1xxx, OS: Linux, CPU Frequency: 3901.978 MHz, CPU Physical cores: 4, Host memory: 16641 MB
+# Log file: /home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1/top.vds
+# Journal file: /home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1/vivado.jou
+# Running On: nuno-HP-Laptop-15-da1xxx, OS: Linux, CPU Frequency: 3771.097 MHz, CPU Physical cores: 4, Host memory: 16641 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.625 ; gain = 149.992 ; free physical = 8065 ; free virtual = 13283
-Command: read_checkpoint -auto_incremental -incremental /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/utils_1/imports/synth_1/top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2034.449 ; gain = 150.992 ; free physical = 5088 ; free virtual = 11118
+Command: read_checkpoint -auto_incremental -incremental {/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/utils_1/imports/synth_1/top.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8355
-WARNING: [Synth 8-10940] macro 'ADD' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:4]
-WARNING: [Synth 8-10940] macro 'SUB' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:5]
-WARNING: [Synth 8-10940] macro 'OR' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:6]
-WARNING: [Synth 8-10940] macro 'AND' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:7]
-WARNING: [Synth 8-10940] macro 'NOT' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:8]
-WARNING: [Synth 8-10940] macro 'XOR' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:9]
-WARNING: [Synth 8-10940] macro 'CMP' is redefined [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:10]
-INFO: [Synth 8-11241] undeclared symbol 'checkcond', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v:185]
-INFO: [Synth 8-11241] undeclared symbol 'IM_OPP', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:16]
-INFO: [Synth 8-11241] undeclared symbol 'alu_cond', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:18]
-INFO: [Synth 8-11241] undeclared symbol 'ir_load', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:20]
-INFO: [Synth 8-11241] undeclared symbol 'pc_load', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:22]
-INFO: [Synth 8-11241] undeclared symbol 'pc_branch', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:23]
-INFO: [Synth 8-11241] undeclared symbol 'pc_jmp', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'mem_read', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:26]
-INFO: [Synth 8-11241] undeclared symbol 'mem_write', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:27]
-INFO: [Synth 8-11241] undeclared symbol 'cond_bit_16', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:29]
-INFO: [Synth 8-11241] undeclared symbol 'alu_bit', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:30]
-INFO: [Synth 8-11241] undeclared symbol 'ld_pc', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:32]
-INFO: [Synth 8-11241] undeclared symbol 'ldi_bit', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:33]
-INFO: [Synth 8-11241] undeclared symbol 'ld_mem', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:34]
-INFO: [Synth 8-11241] undeclared symbol 'direct_bit', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:36]
-INFO: [Synth 8-11241] undeclared symbol 'indexed_bit', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:37]
-INFO: [Synth 8-11241] undeclared symbol 'write_reg', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:39]
-INFO: [Synth 8-11241] undeclared symbol 'Z', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:41]
-INFO: [Synth 8-11241] undeclared symbol 'C', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:42]
-INFO: [Synth 8-11241] undeclared symbol 'V', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:43]
-INFO: [Synth 8-11241] undeclared symbol 'N', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:44]
+INFO: [Synth 8-7075] Helper process launched with PID 69397
+WARNING: [Synth 8-10940] macro 'ADD' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:4]
+WARNING: [Synth 8-10940] macro 'SUB' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:5]
+WARNING: [Synth 8-10940] macro 'OR' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:6]
+WARNING: [Synth 8-10940] macro 'AND' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:7]
+WARNING: [Synth 8-10940] macro 'NOT' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:8]
+WARNING: [Synth 8-10940] macro 'XOR' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:9]
+WARNING: [Synth 8-10940] macro 'CMP' is redefined [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/DATA_FORMATS.v:10]
+INFO: [Synth 8-11241] undeclared symbol 'false_clk', assumed default net type 'wire' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v:30]
+WARNING: [Synth 8-8895] 'false_clk' is already implicitly declared on line 30 [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v:76]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2451.113 ; gain = 384.738 ; free physical = 6979 ; free virtual = 12603
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2760.367 ; gain = 377.770 ; free physical = 4101 ; free virtual = 10132
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Control_Unit' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v:85]
-WARNING: [Synth 8-6104] Input port 'alu_cond' has an internal driver [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v:183]
-INFO: [Synth 8-6155] done synthesizing module 'Control_Unit' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Control_Unit.v:4]
-INFO: [Synth 8-6157] synthesizing module 'Datapath' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Datapath.v:4]
-INFO: [Synth 8-6157] synthesizing module 'Register_File' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Register_File.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Register_File' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Register_File.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Aritmetic_Logic_Unit' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'Aritmetic_Logic_Unit' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:12]
-WARNING: [Synth 8-689] width (5) of port connection 'alu_cond' does not match port width (3) of module 'Aritmetic_Logic_Unit' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Datapath.v:65]
-INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Program_Counter.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Program_Counter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Memory.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Memory.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Instruction_Register' [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Instruction_Register.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Instruction_Register' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Instruction_Register.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Datapath' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/Datapath.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:3]
-WARNING: [Synth 8-3848] Net alu_cond in module/entity top does not have driver. [/home/nuno/Desktop/VeSPA_v4/VeSPA.srcs/sources_1/new/top.v:18]
-WARNING: [Synth 8-7129] Port mem_read in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir_load in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[31] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[30] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[29] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[28] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[27] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[26] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[25] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[24] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[23] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[22] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[21] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[20] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[19] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[18] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[17] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[16] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[15] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[14] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[13] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[12] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[11] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[10] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[9] in module Memory is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ram_input[8] in module Memory is either unconnected or has no load
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Control_Unit' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Control_Unit.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Control_Unit.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'Control_Unit' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Control_Unit.v:4]
+WARNING: [Synth 8-689] width (4) of port connection 'state' does not match port width (5) of module 'Control_Unit' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v:48]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Datapath.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Register_File.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Register_File.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Aritmetic_Logic_Unit' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'Aritmetic_Logic_Unit' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Program_Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Program_Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Memory.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Memory.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Register' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Instruction_Register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Register' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Instruction_Register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Datapath.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/top.v:3]
 WARNING: [Synth 8-7129] Port rst in module Register_File is either unconnected or has no load
-WARNING: [Synth 8-7129] Port alu_cond[2] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port alu_cond[1] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port alu_cond[0] in module Datapath is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3239.082 ; gain = 1172.707 ; free physical = 6171 ; free virtual = 11794
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2851.336 ; gain = 468.738 ; free physical = 3984 ; free virtual = 10015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3239.082 ; gain = 1172.707 ; free physical = 6178 ; free virtual = 11802
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2863.211 ; gain = 480.613 ; free physical = 3984 ; free virtual = 10015
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2863.211 ; gain = 480.613 ; free physical = 3984 ; free virtual = 10015
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2863.211 ; gain = 0.000 ; free physical = 3984 ; free virtual = 10015
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2997.961 ; gain = 0.000 ; free physical = 3978 ; free virtual = 10009
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2997.961 ; gain = 0.000 ; free physical = 3978 ; free virtual = 10009
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3970 ; free virtual = 10002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3247.086 ; gain = 1180.711 ; free physical = 6178 ; free virtual = 11802
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z010clg400-1
----------------------------------------------------------------------------------
-Start Preparing Guide Design
----------------------------------------------------------------------------------
-got a mismatch Control_Unit
-got a mismatch Datapath
-Is not a child genome
-got a mismatch Program_Counter
-got a mismatch Memory
-Is not a child genome
-WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 3285.836 ; gain = 1219.461 ; free physical = 6118 ; free virtual = 11777
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3970 ; free virtual = 10002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 3285.836 ; gain = 1219.461 ; free physical = 6118 ; free virtual = 11777
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3970 ; free virtual = 10002
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Control_Unit'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                 s_start |                            10011 |                            00000
+                 s_start |                            10010 |                            00000
                  s_fetch |                            00001 |                            00001
-                s_decode |                            01000 |                            00010
-                   s_nop |                            01001 |                            00100
-                   s_add |                            01010 |                            00101
-                   s_sub |                            01011 |                            00110
-                    s_or |                            01100 |                            00111
-                   s_and |                            01101 |                            01000
-                   s_not |                            01110 |                            01001
-                   s_xor |                            01111 |                            01010
-                   s_cmp |                            10000 |                            01011
+                s_decode |                            00101 |                            00010
+                   s_nop |                            00110 |                            00100
+                   s_add |                            00111 |                            00101
+                   s_sub |                            01000 |                            00110
+                    s_or |                            01001 |                            00111
+                   s_and |                            01010 |                            01000
+                   s_not |                            01011 |                            01001
+                   s_xor |                            01100 |                            01010
+                   s_cmp |                            01101 |                            01011
                    s_bxx |                            00011 |                            01100
                    s_jmp |                            00010 |                            01101
                     s_ld |                            00000 |                            01110
-                   s_ldi |                            10001 |                            01111
-                   s_ldx |                            10010 |                            10000
-                    s_st |                            00111 |                            10001
-                   s_stx |                            00101 |                            10010
-                   s_hlt |                            00100 |                            10011
+                   s_ldi |                            01110 |                            01111
+                   s_ldx |                            01111 |                            10000
+                    s_st |                            10000 |                            10001
+                   s_stx |                            00100 |                            10010
+                   s_hlt |                            10001 |                            11111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Control_Unit'
-WARNING: [Synth 8-327] inferring latch for variable 'result_reg' [/home/nuno/Desktop/VeSPA_v3/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Z_reg' [/home/nuno/Desktop/VeSPA_v3/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:56]
-WARNING: [Synth 8-327] inferring latch for variable 'C_reg' [/home/nuno/Desktop/VeSPA_v3/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:57]
-WARNING: [Synth 8-327] inferring latch for variable 'V_reg' [/home/nuno/Desktop/VeSPA_v3/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:58]
-WARNING: [Synth 8-327] inferring latch for variable 'N_reg' [/home/nuno/Desktop/VeSPA_v3/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'Z_reg' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'C_reg' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'V_reg' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'N_reg' [/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.srcs/sources_1/new/Aritmetic_Logic_Unit.v:57]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:59 ; elapsed = 00:00:58 . Memory (MB): peak = 3285.836 ; gain = 1219.461 ; free physical = 6142 ; free virtual = 11796
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3968 ; free virtual = 10000
 ---------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -185,23 +142,32 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input   33 Bit       Adders := 1     
 	   2 Input   32 Bit       Adders := 3     
-	   3 Input   32 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 3     
 +---XORs : 
 	   2 Input     33 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 2     
-	                8 Bit    Registers := 4096  
+	                8 Bit    Registers := 64    
 +---Muxes : 
-	   8 Input   33 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 9     
-	  13 Input    8 Bit        Muxes := 4     
-	  19 Input    5 Bit        Muxes := 1     
+	   8 Input   33 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 17    
+	   2 Input    8 Bit        Muxes := 189   
+	   4 Input    8 Bit        Muxes := 16    
+	  13 Input    7 Bit        Muxes := 4     
+	  19 Input    5 Bit        Muxes := 2     
 	  17 Input    5 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 20    
+	   2 Input    5 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 10    
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 195   
 	  19 Input    1 Bit        Muxes := 1     
-	   8 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 48    
+	   4 Input    1 Bit        Muxes := 16    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -214,42 +180,91 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_reg[2]) is unused and will be removed from module Control_Unit.
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port rom_addr[31] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[30] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[29] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[28] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[27] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[26] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[25] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[24] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[23] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[22] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[21] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[20] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[19] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[18] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[17] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[16] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[15] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[14] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[13] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[12] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[11] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[10] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[9] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[8] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[7] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[6] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[5] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rom_addr[4] in module Memory is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (data_path/ALU/Z_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_path/ALU/C_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_path/ALU/V_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_path/ALU/N_reg) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:53 ; elapsed = 00:02:25 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 167 ; free virtual = 3361
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3938 ; free virtual = 9978
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+----------------+-----------+----------------------+--------------+
-|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives   | 
-+------------+----------------+-----------+----------------------+--------------+
-|top         | RF/RegFile_reg | Implied   | 32 x 32              | RAM32M x 12  | 
-+------------+----------------+-----------+----------------------+--------------+
++------------+--------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object               | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------+-----------+----------------------+--------------+
+|top         | data_path/RF/RegFile_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+--------------------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9975
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:02:27 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 173 ; free virtual = 3369
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+--------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object               | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------+-----------+----------------------+--------------+
+|top         | data_path/RF/RegFile_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+--------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:02:27 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 166 ; free virtual = 3369
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -267,37 +282,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3365
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3365
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3365
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3365
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3935 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3366
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3934 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3366
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3934 ; free virtual = 9974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -310,38 +325,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
-
-Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     0|
-+------+---------+-------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    39|
+|3     |LUT1     |    25|
+|4     |LUT2     |    45|
+|5     |LUT3     |    95|
+|6     |LUT4     |   120|
+|7     |LUT5     |   147|
+|8     |LUT6     |   475|
+|9     |RAM32M   |    10|
+|10    |RAM32X1D |     4|
+|11    |FDRE     |   607|
+|12    |FDSE     |     2|
+|13    |IBUF     |     2|
+|14    |OBUF     |     4|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:30 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 163 ; free virtual = 3365
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3934 ; free virtual = 9974
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:31 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 8935 ; free virtual = 12141
-Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:31 . Memory (MB): peak = 3329.785 ; gain = 1263.410 ; free physical = 8942 ; free virtual = 12136
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2997.961 ; gain = 480.613 ; free physical = 3934 ; free virtual = 9973
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2997.961 ; gain = 615.363 ; free physical = 3934 ; free virtual = 9973
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3329.785 ; gain = 0.000 ; free physical = 8939 ; free virtual = 12137
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2997.961 ; gain = 0.000 ; free physical = 4218 ; free virtual = 10258
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3329.785 ; gain = 0.000 ; free physical = 8919 ; free virtual = 12137
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 14 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2997.961 ; gain = 0.000 ; free physical = 4218 ; free virtual = 10258
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
 
-Synth Design complete | Checksum: 26c87856
+Synth Design complete | Checksum: e31f550b
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:02:32 . Memory (MB): peak = 3329.785 ; gain = 1271.348 ; free physical = 8919 ; free virtual = 12137
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 11427.558; main = 2552.675; forked = 9009.868
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 16474.684; main = 3325.871; forked = 13148.812
-INFO: [Common 17-1381] The checkpoint '/home/nuno/Desktop/VeSPA_v4/VeSPA.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2997.961 ; gain = 939.699 ; free physical = 4218 ; free virtual = 10258
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2541.291; main = 2217.694; forked = 367.833
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3944.043; main = 2997.965; forked = 978.094
+INFO: [Common 17-1381] The checkpoint '/home/nuno/Desktop/VeSPA Muxs v3.1/VeSPA.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 22 23:10:46 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 24 23:34:07 2023...
