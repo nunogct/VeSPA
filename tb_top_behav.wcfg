@@ -11,18 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="877.181 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="7,500.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="10,500.001 ns"></ZoomEndTime>
+      <Cursor1Time time="10,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="69"></ValueColumnWidth>
+      <NameColumnWidth column_width="147"></NameColumnWidth>
+      <ValueColumnWidth column_width="93"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wave_markers>
-      <marker label="" time="29404" />
-   </wave_markers>
+   <WVObjectSize size="17" />
    <wvobject type="logic" fp_name="/tb_top/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -31,41 +28,68 @@
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/uut/ctrl_unit/ir_load">
-      <obj_property name="ElementShortName">ir_load</obj_property>
-      <obj_property name="ObjectShortName">ir_load</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/uut/data_path/ir/IR">
-      <obj_property name="ElementShortName">IR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/uut/ctrl_unit/state">
-      <obj_property name="ElementShortName">state[4:0]</obj_property>
-      <obj_property name="ObjectShortName">state[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/uut/data_path/RF/value_in">
-      <obj_property name="ElementShortName">value_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">value_in[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/PC/PC_in">
+      <obj_property name="ElementShortName">PC_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_in[31:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_top/uut/data_path/PC/pc_load">
       <obj_property name="ElementShortName">pc_load</obj_property>
       <obj_property name="ObjectShortName">pc_load</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_top/uut/data_path/PC/PC_in">
-      <obj_property name="ElementShortName">PC_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC_in[31:0]</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/tb_top/uut/data_path/PC/PC_out">
       <obj_property name="ElementShortName">PC_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_top/uut/data_path/RF/RegFile[3]">
-      <obj_property name="ElementShortName">[3][31:0]</obj_property>
-      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/ic/pc_save">
+      <obj_property name="ElementShortName">pc_save[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_save[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/ic/pc_value">
+      <obj_property name="ElementShortName">pc_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_value[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/ir/IR">
+      <obj_property name="ElementShortName">IR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/ctrl_unit/opcode">
+      <obj_property name="ElementShortName">opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[4:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/ctrl_unit/state">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/uut/data_path/ic/pc_error_int">
+      <obj_property name="ElementShortName">pc_error_int</obj_property>
+      <obj_property name="ObjectShortName">pc_error_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/uut/data_path/ic/ext_int">
+      <obj_property name="ElementShortName">ext_int</obj_property>
+      <obj_property name="ObjectShortName">ext_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/uut/data_path/ic/i_req">
+      <obj_property name="ElementShortName">i_req</obj_property>
+      <obj_property name="ObjectShortName">i_req</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/uut/data_path/ic/i_ack">
+      <obj_property name="ElementShortName">i_ack</obj_property>
+      <obj_property name="ObjectShortName">i_ack</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/uut/ctrl_unit/pc_in_sel">
       <obj_property name="ElementShortName">pc_in_sel[1:0]</obj_property>
       <obj_property name="ObjectShortName">pc_in_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/ic/pc_value">
+      <obj_property name="ElementShortName">pc_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_value[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/uut/data_path/ic/int_pend">
+      <obj_property name="ElementShortName">int_pend[2:0]</obj_property>
+      <obj_property name="ObjectShortName">int_pend[2:0]</obj_property>
    </wvobject>
 </wave_config>
