@@ -1,0 +1,28 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.696078",
+   "Default View_TopLeft":"-335,264",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clka_0 -pg 1 -lvl 0 -x -90 -y 360 -defaultsOSRD
+preplace portBus addra_0 -pg 1 -lvl 0 -x -90 -y 340 -defaultsOSRD
+preplace portBus douta_0 -pg 1 -lvl 2 -x 230 -y 530 -defaultsOSRD
+preplace portBus douta_1 -pg 1 -lvl 2 -x 230 -y 580 -defaultsOSRD
+preplace portBus douta_2 -pg 1 -lvl 2 -x 230 -y 620 -defaultsOSRD
+preplace portBus douta_3 -pg 1 -lvl 2 -x 230 -y 680 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -x 90 -y 350 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 1 -x 90 -y 510 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 1 -x 90 -y 730 -defaultsOSRD
+preplace inst blk_mem_gen_3 -pg 1 -lvl 1 -x 90 -y 890 -defaultsOSRD
+preplace netloc addra_0_1 1 0 1 -50 340n
+preplace netloc blk_mem_gen_0_douta 1 0 2 -20 600 200J
+preplace netloc blk_mem_gen_1_douta 1 0 2 -30 610 210J
+preplace netloc blk_mem_gen_2_douta 1 0 2 -20 620 NJ
+preplace netloc blk_mem_gen_3_douta 1 0 2 -40 640 200J
+preplace netloc clka_0_1 1 0 1 -60 360n
+levelinfo -pg 1 -90 90 230
+pagesize -pg 1 -db -bbox -sgen -240 -260 410 1300
+"
+}
+0

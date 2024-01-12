@@ -10,6 +10,7 @@
 
 module Aritmetic_Logic_Unit(
     input [2:0]alu_cond,
+    input en,
     input [31:0]op1,
     input [31:0]op2,
     output [31:0]alu_out,
@@ -31,6 +32,8 @@ module Aritmetic_Logic_Unit(
    end
    
     always@(*)
+    begin
+    if(en)
     begin
       case (alu_cond) 
     `ADD: begin result = op1 + op2; end
@@ -58,7 +61,7 @@ module Aritmetic_Logic_Unit(
         V <= (result[31] & ~op1[31] & ~(subt ^ op2[31])) |
            (~result[31] & op1[31] & (subt ^ op2[31])); 
         end
-        
+    end    
 end
     assign subt = (alu_cond == `SUB || alu_cond == `CMP) ? 1'b1 :
                   (alu_cond == `ADD) ? 1'b0 : 'hzz;

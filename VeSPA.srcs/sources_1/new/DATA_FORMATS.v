@@ -6,7 +6,7 @@
 `define OR  5'b00011
 `define AND 5'b00100
 `define NOT 5'b00101
-`define XOR 5'b00110
+`define XOR 5'b00110 
 `define CMP 5'b00111
 `define BXX 5'b01000
 `define JMP 5'b01001
@@ -15,6 +15,7 @@
 `define LDX 5'b01100
 `define ST  5'b01101
 `define STX 5'b01110
+`define RETI 5'b01111
 `define HLT 5'b11111
 
 `define BRA 'b0000
@@ -31,3 +32,4 @@
 `define BLE 'b1101
 `define BPL 'b0110
 `define BMI 'b1110
+

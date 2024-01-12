@@ -1,0 +1,260 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1CDA01F95C97A71E",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../VeSPA.gen/sources_1/bd/memory_2",
+      "name": "memory_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "blk_mem_gen_1": "",
+      "blk_mem_gen_2": "",
+      "blk_mem_gen_3": ""
+    },
+    "ports": {
+      "clka_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "memory_2_clka_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "dina_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "douta_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "wea_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "douta_1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "douta_2": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "douta_3": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "dina_1": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "dina_2": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "dina_3": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "addra_0": {
+        "direction": "I",
+        "left": "12",
+        "right": "0"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "memory_2_blk_mem_gen_0_0",
+        "xci_path": "ip/memory_2_blk_mem_gen_0_0/memory_2_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "8192"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "memory_2_blk_mem_gen_0_1",
+        "xci_path": "ip/memory_2_blk_mem_gen_0_1/memory_2_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "blk_mem_gen_1",
+        "parameters": {
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "memory_2_blk_mem_gen_0_2",
+        "xci_path": "ip/memory_2_blk_mem_gen_0_2/memory_2_blk_mem_gen_0_2.xci",
+        "inst_hier_path": "blk_mem_gen_2",
+        "parameters": {
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "memory_2_blk_mem_gen_2_0",
+        "xci_path": "ip/memory_2_blk_mem_gen_2_0/memory_2_blk_mem_gen_2_0.xci",
+        "inst_hier_path": "blk_mem_gen_3",
+        "parameters": {
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "addra_0_1": {
+        "ports": [
+          "addra_0",
+          "blk_mem_gen_0/addra",
+          "blk_mem_gen_1/addra",
+          "blk_mem_gen_2/addra",
+          "blk_mem_gen_3/addra"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "douta_0"
+        ]
+      },
+      "blk_mem_gen_1_douta": {
+        "ports": [
+          "blk_mem_gen_1/douta",
+          "douta_1"
+        ]
+      },
+      "blk_mem_gen_2_douta": {
+        "ports": [
+          "blk_mem_gen_2/douta",
+          "douta_2"
+        ]
+      },
+      "blk_mem_gen_3_douta": {
+        "ports": [
+          "blk_mem_gen_3/douta",
+          "douta_3"
+        ]
+      },
+      "clka_0_1": {
+        "ports": [
+          "clka_0",
+          "blk_mem_gen_0/clka",
+          "blk_mem_gen_1/clka",
+          "blk_mem_gen_2/clka",
+          "blk_mem_gen_3/clka"
+        ]
+      },
+      "dina_0_1": {
+        "ports": [
+          "dina_0",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "dina_1_1": {
+        "ports": [
+          "dina_1",
+          "blk_mem_gen_1/dina"
+        ]
+      },
+      "dina_2_1": {
+        "ports": [
+          "dina_2",
+          "blk_mem_gen_2/dina"
+        ]
+      },
+      "dina_3_1": {
+        "ports": [
+          "dina_3",
+          "blk_mem_gen_3/dina"
+        ]
+      },
+      "wea_0_1": {
+        "ports": [
+          "wea_0",
+          "blk_mem_gen_0/wea",
+          "blk_mem_gen_1/wea",
+          "blk_mem_gen_2/wea",
+          "blk_mem_gen_3/wea"
+        ]
+      }
+    }
+  }
+}

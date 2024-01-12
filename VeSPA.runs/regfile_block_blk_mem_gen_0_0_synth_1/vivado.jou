@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Dec  3 23:09:17 2023
+# Process ID: 52280
+# Current directory: /home/nuno/Desktop/VESPAS V2/VeSPA_regfile_rom_ram/VeSPA.runs/regfile_block_blk_mem_gen_0_0_synth_1
+# Command line: vivado -log regfile_block_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source regfile_block_blk_mem_gen_0_0.tcl
+# Log file: /home/nuno/Desktop/VESPAS V2/VeSPA_regfile_rom_ram/VeSPA.runs/regfile_block_blk_mem_gen_0_0_synth_1/regfile_block_blk_mem_gen_0_0.vds
+# Journal file: /home/nuno/Desktop/VESPAS V2/VeSPA_regfile_rom_ram/VeSPA.runs/regfile_block_blk_mem_gen_0_0_synth_1/vivado.jou
+# Running On: nuno-HP-Laptop-15-da1xxx, OS: Linux, CPU Frequency: 2735.553 MHz, CPU Physical cores: 4, Host memory: 16641 MB
+#-----------------------------------------------------------
+source regfile_block_blk_mem_gen_0_0.tcl -notrace

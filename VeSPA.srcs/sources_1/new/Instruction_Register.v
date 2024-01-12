@@ -24,7 +24,7 @@ initial begin
 IR = 'd0; 
 end 
 
-always@(posedge clk)
+always@(negedge clk)
 begin
 if(rst)
     begin
@@ -32,8 +32,9 @@ if(rst)
     end
 else if(ir_load)
     begin
-    IR = IR_in;
+   IR = IR_in;
     end
+    
 end
 
 assign opcode = IR[31:27];

@@ -10,7 +10,7 @@ module tb_top();
     );
     
     initial begin
-        rst = 1'b1;
+        rst = 1'b0;
         clk = 1'b0;
     end
     
